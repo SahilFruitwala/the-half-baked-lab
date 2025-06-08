@@ -70,7 +70,7 @@ const teamMembers: TeamMember[] = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm py-16 border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -222,7 +222,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
           className="object-cover transition-transform duration-300 hover:scale-105"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+        <div className="absolute inset-0 bg-linear-to-t from-background/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
           <div className="flex space-x-2">
             {member.social.twitter && (
               <Button

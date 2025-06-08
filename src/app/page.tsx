@@ -25,7 +25,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-amber-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background decorations */}
@@ -42,7 +42,7 @@ export default function HomePage() {
               <Sparkles className="h-4 w-4 animate-pulse" />
             </div>
           </div>
-          <div className="flex flex-col items-center mb-12 group">
+          <div className="flex flex-col items-center group">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -52,7 +52,7 @@ export default function HomePage() {
             />
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
               The Half Baked
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 dark:from-amber-400 dark:to-orange-400">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-600 to-orange-600 dark:from-amber-400 dark:to-orange-400">
                 {" "}
                 Lab
               </span>
@@ -135,7 +135,7 @@ export default function HomePage() {
                 className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm hover:scale-105 overflow-hidden"
               >
                 <div
-                  className={`aspect-video bg-gradient-to-br ${project.gradient} opacity-80 dark:opacity-60`}
+                  className={`aspect-video bg-linear-to-br ${project.gradient} opacity-80 dark:opacity-60`}
                 ></div>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">

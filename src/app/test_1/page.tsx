@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm py-16 border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="text-center border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
               <CardHeader>
-                <div className="w-24 h-24 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full mx-auto mb-4 shadow-lg"></div>
+                <div className="w-24 h-24 bg-linear-to-br from-amber-400 to-amber-600 rounded-full mx-auto mb-4 shadow-lg"></div>
                 <CardTitle className="text-slate-900 dark:text-white">Partner A</CardTitle>
                 <CardDescription className="text-slate-600 dark:text-slate-300">
                   Full-Stack Developer & Designer
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
             <Card className="text-center border-0 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
               <CardHeader>
-                <div className="w-24 h-24 bg-gradient-to-br from-slate-400 to-slate-600 rounded-full mx-auto mb-4 shadow-lg"></div>
+                <div className="w-24 h-24 bg-linear-to-br from-slate-400 to-slate-600 rounded-full mx-auto mb-4 shadow-lg"></div>
                 <CardTitle className="text-slate-900 dark:text-white">Partner B</CardTitle>
                 <CardDescription className="text-slate-600 dark:text-slate-300">
                   Backend Engineer & Data Enthusiast
