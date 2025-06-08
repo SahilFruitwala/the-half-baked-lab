@@ -57,7 +57,7 @@ const teamMembers: TeamMember[] = [
     id: 2,
     name: "Purva Desai",
     role: "Data Scientist/Analyst",
-    bio: "Sahil founded The Half Baked Lab with a vision to create digital experiences that are both functional and delightful.",
+    bio: "Purva join The Half Baked Lab with a vision to provide unique experice and knowledge to millions of people.",
     image: "/avatars/purva.png",
     social: {
       website: "https://desaipurva.com/",
@@ -82,7 +82,7 @@ export default function AboutPage() {
             About The Half Baked Lab
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Two creative minds, countless half-baked ideas, and the
+            Creative minds, countless half-baked ideas, and the
             determination to bring them to life.
           </p>
         </div>
@@ -96,10 +96,10 @@ export default function AboutPage() {
           </h2>
           <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 mb-4">
             The Half Baked Lab was born from a simple realization: some of the
-            best ideas start out imperfect. In 2022, we—two developers with
+            best ideas start out imperfect. In 2024, we—two developers with
             complementary skills and a shared love for experimentation—decided
             to create a space where we could collaborate on projects without the
-            pressure of perfection.
+            pressure of perfection. 
           </p>
           <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 mb-4">
             What began as casual weekend coding sessions quickly evolved into

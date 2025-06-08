@@ -66,26 +66,29 @@ export default function HomePage() {
             <Link href="/projects">
               <Button
                 size="lg"
-                className="bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="cursor-pointer bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Explore Our Work
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View on GitHub
-            </Button>
+            <Link href="https://github.com/SahilFruitwala/the-half-baked-lab">
+              <Button
+                variant="outline"
+                size="lg"
+                className="cursor-pointer border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                Clone Theme
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+      <section className="pt-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-4">
@@ -208,7 +211,7 @@ export default function HomePage() {
       </section>
 
       {/* Recent Blog Posts */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-slate-900/50">
+      {/* <section className="pt-20 pb-10 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-4">
@@ -291,10 +294,10 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Ideas Preview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50">
+      <section className="pt-20 pb-10 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Lightbulb className="h-5 w-5 text-slate-600 dark:text-slate-400" />

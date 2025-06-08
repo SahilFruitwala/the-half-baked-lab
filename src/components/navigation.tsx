@@ -40,13 +40,13 @@ export function Navigation() {
               Projects
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
             </Link>
-            <Link
+            {/* <Link
               href="/blog"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors relative group"
             >
               Blog
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
-            </Link>
+            </Link> */}
             <Link
               href="/ideas"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors relative group"
