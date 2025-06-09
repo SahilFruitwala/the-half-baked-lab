@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import readingTime from "reading-time";
 
 export type BlogPost = {
   slug: string;
@@ -12,13 +13,13 @@ export type BlogPost = {
   content?: string;
 };
 
-const postsDirectory = path.join(process.cwd(), "content/blog");
+const postsDirectory = path.join(process.cwd(), "src/content/blog");
 
 export function getBlogPosts(): BlogPost[] {
   try {
     // Check if directory exists
     if (!fs.existsSync(postsDirectory)) {
-      return getFallbackPosts();
+      return [];
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
@@ -30,20 +31,25 @@ export function getBlogPosts(): BlogPost[] {
         const fileContents = fs.readFileSync(fullPath, "utf8");
         const { data } = matter(fileContents);
 
+        // Use external library to calculate read time
+        // Install with: npm install reading-time
+        const stats = readingTime(fileContents);
+        const readTime = stats.text;
+
         return {
           slug,
           title: data.title,
           excerpt: data.excerpt,
           date: data.date,
           author: data.author,
-          readTime: data.readTime,
+          readTime,
         };
       });
 
     return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
   } catch (error) {
     console.error("Error reading blog posts:", error);
-    return getFallbackPosts();
+    return [];
   }
 }
 
@@ -58,18 +64,61 @@ export function getBlogPost(slug: string): BlogPost | null {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
 
+    const stats = readingTime(fileContents);
+    const readTime = stats.text;
+
     return {
       slug,
       title: data.title,
       excerpt: data.excerpt,
       date: data.date,
       author: data.author,
-      readTime: data.readTime,
+      readTime,
       content,
     };
   } catch (error) {
     console.error(`Error reading blog post ${slug}:`, error);
     return null;
+  }
+}
+
+export function getLatestBlogPosts(): BlogPost[] {
+  try {
+    // Check if directory exists
+    if (!fs.existsSync(postsDirectory)) {
+      return [];
+    }
+
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData = fileNames
+      .filter((fileName) => fileName.endsWith(".mdx"))
+      .map((fileName) => {
+        const slug = fileName.replace(/\.mdx$/, "");
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, "utf8");
+        const { data } = matter(fileContents);
+
+        // Use external library to calculate read time
+        // Install with: npm install reading-time
+        const stats = readingTime(fileContents);
+        const readTime = stats.text;
+
+        return {
+          slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          date: data.date,
+          author: data.author,
+          readTime,
+        };
+      });
+
+    return allPostsData
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, 2);
+  } catch (error) {
+    console.error("Error reading blog posts:", error);
+    return [];
   }
 }
 

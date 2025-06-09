@@ -22,8 +22,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { getLatestBlogPosts } from "@/lib/blog";
 
 export default function HomePage() {
+  const latestPosts = getLatestBlogPosts();
+
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-amber-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
       {/* Hero Section */}
@@ -226,26 +229,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "The Art of Half-Baked Ideas",
-                excerpt:
-                  "Why starting with imperfect concepts often leads to the most innovative solutions.",
-                date: "Dec 15, 2024",
-                author: "Partner A",
-                readTime: "5 min read",
-                slug: "the-art-of-half-baked-ideas",
-              },
-              {
-                title: "Building Together: Our Collaboration Process",
-                excerpt:
-                  "How we've learned to merge different coding styles and creative approaches.",
-                date: "Dec 10, 2024",
-                author: "Partner B",
-                readTime: "7 min read",
-                slug: "building-together",
-              },
-            ].map((post, index) => (
+            {latestPosts.map((post, index) => (
               <Link href={`/blog/${post.slug}`} key={index}>
                 <Card className="group hover:shadow-2xl transition-all duration-500 cursor-pointer border-0 shadow-lg h-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm hover:scale-105">
                   <CardHeader>

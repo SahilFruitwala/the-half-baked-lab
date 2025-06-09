@@ -6,6 +6,14 @@ import Link from "next/link"
 export default function BlogPage() {
   const posts = getBlogPosts()
 
+  if (posts.length === 0) {
+    return <div className="flex flex-col items-center justify-center min-h-[40vh]">
+      <BookOpen className="h-10 w-10 text-amber-600 dark:text-amber-500 mb-4" />
+      <h2 className="text-2xl font-semibold text-slate-800 dark:text-white mb-2">No blog posts yet</h2>
+      <p className="text-slate-600 dark:text-slate-300">Check back soon for new content and updates!</p>
+    </div>
+  }
+
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
       {/* Header */}

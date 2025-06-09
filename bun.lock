@@ -9,14 +9,9 @@
         "@next/mdx": "^14.0.0",
         "@radix-ui/react-slot": "^1.2.3",
         "@types/mdx": "^2.0.0",
-        "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
         "autoprefixer": "^10.0.1",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
-        "eslint": "^8",
-        "eslint-config-next": "14.0.0",
         "gray-matter": "^4.0.3",
         "lucide-react": "^0.513.0",
         "next": "15.3.3",
@@ -26,9 +21,8 @@
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-markdown": "^9.0.1",
+        "reading-time": "^1.5.0",
         "tailwind-merge": "^3.3.0",
-        "tailwindcss": "^3.3.0",
-        "typescript": "^5",
       },
       "devDependencies": {
         "@eslint/eslintrc": "^3",
@@ -918,6 +912,8 @@
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 
     "react-markdown": ["react-markdown@9.1.0", "", { "dependencies": { "@types/hast": "^3.0.0", "@types/mdast": "^4.0.0", "devlop": "^1.0.0", "hast-util-to-jsx-runtime": "^2.0.0", "html-url-attributes": "^3.0.0", "mdast-util-to-hast": "^13.0.0", "remark-parse": "^11.0.0", "remark-rehype": "^11.0.0", "unified": "^11.0.0", "unist-util-visit": "^5.0.0", "vfile": "^6.0.0" }, "peerDependencies": { "@types/react": ">=18", "react": ">=18" } }, "sha512-xaijuJB0kzGiUdG7nc2MOMDUDBWPyGAjZtUrow9XxUeua8IqeP+VlIfAZ3bphpcLTnSZXz6z9jcVC/TCwbfgdw=="],
+
+    "reading-time": ["reading-time@1.5.0", "", {}, "sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg=="],
 
     "recma-build-jsx": ["recma-build-jsx@1.0.0", "", { "dependencies": { "@types/estree": "^1.0.0", "estree-util-build-jsx": "^3.0.0", "vfile": "^6.0.0" } }, "sha512-8GtdyqaBcDfva+GUKDr3nev3VpKAhup1+RvkMvUxURHpW7QyIvk9F5wz7Vzo06CEMSilw6uArgRqhpiUcWp8ew=="],
 
